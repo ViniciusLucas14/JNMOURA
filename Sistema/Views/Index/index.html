@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="ro">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-content">
+                    <center>
+                        <h4 class="">INICIAR SESSÃO</h4>
+                    </center>
+                    <form method="post" id="login">
+                        <div class="input-field col s12">
+                            <input id="email" name="email" class="validate" type="email">
+                            <label for="email" class="error">EMAIL</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input id="password" name="password" class="validate" type="password" autocomplete="on"
+                                minlength="4" maxlength="20" required />
+                            <label for="password" class="error">SENHA</label>
+                        </div>
+
+                    </form>
+                    <button onclick="loginUser();" id="btnLogn" class="waves-effect waves-light btn"> Iniciar
+                        Sessão</button>
+                    <br>
+
+                    <label id="indexMessage" class="Message error"></label>
+                    <div class="row">
+                        <div class="input-field col s0">
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Registrar</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- estrutura do modal-->
+<div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <center>
+                <h1>LOGIN</h1>
+                <h5>PARA TER ACESSO AO EMAIL E SENHA, CONTATE O ADMINISTRADOR</h5>
+            </center>
+        </div>
+        <div class="modal-footer">
+            <label id="registerMessage" class="text-left"></label>
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">JN Moura</a>
+        </div>
+</div>

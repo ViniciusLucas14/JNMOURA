@@ -1,0 +1,73 @@
+<div class="container2">
+    <h5>Contatos</h5>
+    <div class="row">
+        <div class="input-field col s0">
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Registrar</a>
+        </div>
+        <div class="input-field col s6">
+            <input placeholder="Buscar contato" id="filtrarUser" type="text" onKeyUp="getUsers()">
+            <label for="filtrarUser">Buscar contato</label>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Endereço</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="resultUser"></tbody>
+    </table>
+    <!-- estrutura do modal -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <form class="col s12" id="validate" enctype="multipart/form-data" method="POST">
+            <div class="modal-content">
+                <center>
+                    <h5>Registrar contato</h5>
+                </center>
+                <div class="row">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Nome" id="nome" name="nome" type="text" class="validate" required>
+                            <label class="error" for="Nome">Nome</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Telefone" id="telefone" name="telefone" type="number" class="validate"
+                                required>
+                            <label class="error" for="Telefone">Telefone</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="Endereco" id="endereco" name="endereco" type="text" class="validate"
+                                required>
+                            <label class="error" for="Endereco">Endereco</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <label id="registerMessage" class="text-left Message"></label>
+                <button id="registerClose" class="modal-close waves-effect waves-green btn-flat">Cancelar</button>
+                <button id="registerUser" class="waves-effect waves-light btn"> Cadastrar </button>
+            </div>
+        </form>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h4>Deseja excluir o contato?</h4>
+            <p id="userName"></p>
+        </div>
+        <div class="modal-footer">
+            <label id="deteUserMessage" class="text-left Message"></label>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            <a href="#!" id="deleteUser" class="waves-effect waves-green btn-flat">Aceitar</a>
+        </div>
+    </div>
+</div>
